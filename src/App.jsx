@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import Service from "./Service";
@@ -19,6 +19,7 @@ const App = () => {
         <Route exact path="about" element={<About />} />
         <Route exact path="contact" element={<Contact />} />
         <Route exact path="service" element={<Service />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
